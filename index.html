@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>SUPUN MD MAIN REPO</title>
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+:root {
+  --primary-color: #b74b4b;
+  --primary-color-dark: #b74b4b;
+  --secondary-color: #fafcff;
+  --text-dark: #0d213f;
+  --text-light: #767268;
+  --extra-light: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.section__subtitle {
+  font-size: 1rem;
+  color: var(--text-dark);
+  max-width: calc(var(--max-width) / 2);
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.70rem 2rem;
+    background-color: rgba(0, 0, 0, 0.027);
+    border-radius: 4rem;
+    font-size: 1.0rem;
+    color: #b74b4b;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #b74b4b;
+    color: rgba(2, 3, 3, 0.938);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.btn1{
+    display: inline-block;
+    padding: 0.50rem 1rem;
+    background-color: rgba(0, 0, 0, 0.027);
+    border-radius: 3rem;
+    font-size: 1.0rem;
+    color: #b74b4b;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    transform: scale3d(1.03);
+    background-color: #b74b4b;
+    color: rgba(2, 3, 3, 0.938);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.nav__logo span {
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0 1rem;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--secondary-color);
+}
+
+.header__container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.header__image {
+  position: relative;
+}
+
+.header__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.5rem solid var(--extra-light);
+  border-radius: 2rem;
+  box-shadow: 5px 5px 30px rgba(194, 3, 3, 0.849);
+}
+
+.header__image img:nth-child(1) {
+  max-width: 350px;
+  transform: translate(-75%, -50%);
+}
+
+.header__image img:nth-child(2) {
+  max-width: 250px;
+  transform: translate(0%, -25%);
+}
+
+.header__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__content > div {
+  max-width: 400px;
+  display: grid;
+  gap: 1rem;
+}
+
+.header__content .sub__header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.header__content h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.header__content .action__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.video__image {
+  position: relative;
+}
+
+.video__image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video__image span {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.video__image span i {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: red;
+  background-color: var(--extra-light);
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story > span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.destination__nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.destination__nav span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.destination__nav span:hover {
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+}
+
+.destination__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.destination__card {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+}
+
+.destination__card img {
+  border-radius: 1rem;
+}
+
+.destination__details {
+  position: absolute;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--extra-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.destination__card:hover .destination__details {
+  bottom: 1rem;
+}
+
+.destination__title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.destination__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.trip {
+  background-color: var(--secondary-color);
+}
+
+.trip__container :is(.section__title, .section__subtitle, .view__all) {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.trip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.trip__card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.trip__details {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background-color: var(--extra-light);
+  cursor: pointer;
+}
+
+.rating {
+  color: goldenrod;
+}
+
+.booking__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.book__now {
+  padding: 0.5rem 1.5rem;
+  color: var(--primary-color);
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book__now:hover {
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+}
+
+.gallary__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.image__gallary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gallary__col {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.gallary__col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallary__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallary__content > div {
+  max-width: 400px;
+}
+
+.gallary__content .section__subtitle {
+  margin-bottom: 2rem;
+}
+
+.subscribe {
+  background-color: var(--secondary-color);
+}
+
+.subscribe__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.subscribe__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  background-color: var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+}
+
+.subscribe__form input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: var(--text-dark);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  color: var(--secondary-color);
+}
+
+.footer__col h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer__col h3 span {
+  color: var(--primary-color);
+}
+
+.footer__col p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--primary-color);
+}
+
+.footer__col p span {
+  font-weight: 600;
+}
+
+.footer__col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  border-top: 1px solid var(--text-light);
+}
+
+@media (width < 1200px) {
+
+  
+  .header__image img:nth-child(1) {
+    max-width: 300px;
+  }
+  
+  .header__image img:nth-child(2) {
+    max-width: 200px;
+  }
+}
+
+@media (width < 900px) {
+  
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header__image {
+    min-height: 500px;
+  }
+
+  .destination__grid {
+    gap: 1rem;
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallary__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subscribe__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.header-container .supun-content{
+    color: rgb(0, 255, 213);
+    width: 40%;
+    min-height: 100px;
+}
+
+.supun-content h4{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.supun-content h4 span{
+    color: rgb(159, 18, 18);
+    text-shadow: 0  0 10px rgb(159, 18, 18);
+}
+
+.supun-content .typewriter{
+    font-size: clamp(1rem, 1rem + 4vw, 2.5rem);
+    font-weight: 600;
+}
+
+.supun-content .typewriter-text{
+    color: rgb(159, 18, 18);
+    text-shadow: 0 0 10px rgb(159, 18, 18);
+}
+
+.supun-logo{
+    font-size: 1.5rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.supun-logo:hover{
+    transform: scale(1.1);
+}
+
+.supun-footer{
+    font-size: 0.95rem;
+    color: #fdfbfb;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.supun-footer:hover{
+    transform: scale(1.1);
+}
+
+</style>    
+<body>
+    <nav>
+      <a href="https://whatsapp.com/channel/0029VaXRYlrKwqSMF7Tswi38" class="supun-logo">SUPUN MD</a>
+        <ul class="nav__links">
+          <li class="link"><a href="https://supun-md-session.vercel.app/">Session</a></li>
+          <li class="link"><a href="https://supun-md-deploy.vercel.app/">Deploy</a></li>
+          <li class="link"><a href="https://youtube.com/@darkshadow_zap?si=8js31BzLWISSdz12">Tutorial</a></li>
+        </ul>
+        <a href="https://wa.me/message/ZIYNRQ3DA5RWD1" class="btn">Contact Us</a>
+      </nav>
+    <header>
+        <div class="section__container header__container">
+          <div class="header__image" >
+            <img src="image/supun-main1.jpg" alt="header" />
+            <img src="image/supun-main2.jpg" alt="header" />
+          </div>
+          <div class="header__content">
+            <div>
+                <div class="supun-content">
+                  <h4 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Supun Md</span></h4>
+                  <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+              </div>
+              <p class="section__subtitle">
+                Click This Button. DownLoad Supun Md Script.
+              </p>
+              <div class="action__btns">
+                <a href="#" class="btn">Download Script</a>
+                <div class="story">
+                  <div class="video__image">
+                    <img src="image/supun.jpg" alt="SUPUN MD" />
+                    <span><i class="ri-play-fill"></i></span>
+                  </div>
+                  <span>DL Supun md Script</span>
+                                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <div class="subscribe__content">
+          <h2 class="section__title">OTHER PAGES</h2>
+          <p class="section__subtitle">
+            SUPUN MD SESSION PAGES....
+          </p>
+        </div>
+        <div class="header__content">
+       
+            <div class="action__btns">
+              <a href="https://supun-md-session.vercel.app/" class="btn">Session</a>
+              <div class="story">
+                <div class="video__image">
+                  <img src="image/supun.jpg" alt="SUPUN MD" />
+                  <span><i class="ri-play-fill"></i></span>
+                </div>
+                <span>Supun Md Session Web</span>
+                              </div>
+          </div>
+        </div>       
+        <p class="section__subtitle">
+          SUPUN MD DEPLOY PAGES....
+        </p>
+      <div class="header__content">
+     
+          <div class="action__btns">
+            <a href="https://supun-md-deploy.vercel.app/" class="btn">Deploy</a>
+            <div class="story">
+              <div class="video__image">
+                <img src="image/supun.jpg" alt="SUPUN MD" />
+                <span><i class="ri-play-fill"></i></span>
+              </div>
+              <span>Supun Md Deploy Web</span>
+                            </div>
+        </div>
+      </div>       
+  </section>
+
+    <section class="section__container destination__container">
+        <div class="section__header">
+          <div>
+            <h2 class="section__title">Preview Md Featichers</h2>
+            <p class="section__subtitle">
+              SUPUN MD Tame And Featichers Preview New....
+            </p>
+          </div>
+          <div class="destination__nav">
+            <span><i class="ri-arrow-left-s-line"></i></span>
+            <span><i class="ri-arrow-right-s-line"></i></span>
+          </div>
+        </div>
+        <div class="destination__grid">
+          <div class="destination__card">
+            <img src="image/supun-review.png" alt="destination" />
+            <div class="destination__details">
+              <p class="destination__title">SUPUN MD MENU</p>
+              <p class="destination__subtitle">Supun Md Menu Thame</p>
+            </div>
+          </div>
+          <div class="destination__card">
+            <img src="image/supun-review.png" alt="destination" />
+            <div class="destination__details">
+              <p class="destination__title">SUPUN MD MOVIE</p>
+              <p class="destination__subtitle">Movie Featichers</p>
+            </div>
+          </div>
+          <div class="destination__card">
+            <img src="image/supun-review.png" alt="destination" />
+            <div class="destination__details">
+              <p class="destination__title">SUPUN MD DOWNLOAD</p>
+              <p class="destination__subtitle">DownLoad Featichers</p>
+            </div>
+          </div>
+          <div class="destination__card">
+            <img src="image/supun-review.png" alt="destination" />
+            <div class="destination__details">
+              <p class="destination__title">SUPUN MD VIP</p>
+              <p class="destination__subtitle">Special Featichers</p>
+            </div>
+          </div>
+        </div>
+    </section>    
+ 
+    <section class="trip">
+        <div class="section__container trip__container">
+          <h2 class="section__title">SUPUN MD DEPLOY TUTORIAL</h2>
+          <p class="section__subtitle">
+            Wach And Deploy Supun Md.
+          </p>
+          <div class="trip__grid">
+            <div class="trip__card">
+              <img src="image/supun2.jpg" alt="trip" />
+              <div class="trip__details">
+                <p>Supun Md Deploy Panel</p>
+                <div class="rating"><i class="ri-star-fill"></i>10/02/2025</div>
+                <div class="booking__price">
+                  <div class="price"><span>PlatFrom</span> YouTube</div>
+                  <a href="#" class="btn1">Wach New</a>
+                </div>
+              </div>
+            </div>
+            <div class="trip__card">
+                <img src="image/supun2.jpg" alt="trip" />
+                <div class="trip__details">
+                  <p>Supun Md Deploy TakDrive</p>
+                  <div class="rating"><i class="ri-star-fill"></i>11/01/2025</div>
+                  <div class="booking__price">
+                    <div class="price"><span>PlatForm</span> YouTube</div>
+                    <a href="#" class="btn1">Wach New</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trip__card">
+                <img src="image/supun2.jpg" alt="trip" />
+                <div class="trip__details">
+                  <p>Supun Md Deploy Render</p>
+                  <div class="rating"><i class="ri-star-fill"></i>22/03/2025</div>
+                  <div class="booking__price">
+                    <div class="price"><span>PlatForm</span> YouTube</div>
+                    <a href="#" class="btn1">Wach New</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <section class="subscribe">
+            <div class="section__container subscribe__container">
+              <div class="subscribe__content">
+                <h2 class="section__title">SEND SUPUN MD ERROR</h2>
+                <p class="section__subtitle">
+                  Supun Md Deploy Error Problem And User Problem Send SUPUN MD Owner.
+                </p>
+              </div>
+              <div class="subscribe__form">
+                <form>
+                  <input type="Error" placeholder="Your error mg here" />
+                  <a href="#" class="btn">Send</a>
+                </form>
+              </div>
+            </div>
+          </section>
+            
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <h3>SUPUN MD<span>.</span></h3>
+            <p>
+             Supun Md Is Multi Device Whatsapp Bot In The World.Supun Md Developed BY Mr.Supun Fernando.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h4>Support</h4>
+            <a href="https://whatsapp.com/channel/0029VaXRYlrKwqSMF7Tswi38" class="supun-footer">Wa Channel</a>
+            <br>
+            <a href="https://whatsapp.com/channel/0029VaXRYlrKwqSMF7Tswi38" class="supun-footer">Terms</a>
+            <br>
+            <a href="https://whatsapp.com/channel/0029VaXRYlrKwqSMF7Tswi38" class="supun-footer">Privacy Policy</a>
+            <br>
+            <a href="https://wa.me/message/ZIYNRQ3DA5RWD1" class="supun-footer">Contact Us</a>
+          </div>
+          <div class="footer__col">
+            <h4>Owner Info</h4>
+            <p>
+              <span>Name:</span>  Mr.Supun Fernando
+            </p>
+            <p><span>Email:</span> supunfernando9889.com</p>
+            <p><span>Phone:</span> +94718461889</p>
+          </div>
+        </div>
+        <div class="footer__bar">
+          Copyright © 2025 ᴘᴀᴡᴇʀᴇᴅ ʙʏ ꜱᴜᴘᴜɴ ᴍᴅ.
+        </div>
+      </footer>
+    </body>
+    <script>
+
+const texts = [
+    "DEVELOPER",
+    "DESIGNER",
+    "PROGRAMMER",
+    "YOUTUBER"
+]
+
+let speed  =100;
+const textElements = document.querySelector(".typewriter-text");
+
+let textIndex = 0;
+let charcterIndex = 0;
+
+function typeWriter(){
+    if (charcterIndex < texts[textIndex].length){
+        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
+        charcterIndex++;
+        setTimeout(typeWriter, speed); 
+    }
+    else{
+        setTimeout(eraseText, 1000)
+    }
+}
+
+function eraseText(){
+    if(textElements.innerHTML.length > 0){
+        textElements.innerHTML = textElements.innerHTML.slice(0,-1);
+        setTimeout(eraseText, 50)
+    }
+    else{
+        textIndex = (textIndex + 1) % texts.length;
+        charcterIndex = 0;
+        setTimeout(typeWriter, 500)
+    }
+}
+
+window.onload = typeWriter
+
+    </script>
+  </html>
+  
